@@ -7,20 +7,23 @@
 
 import Foundation
 
+protocol AlbumListViewModelDelegate: AnyObject {
+    func updateViews()
+}
+
 class AlbumListViewModel {
     
     private let albumService: AlbumServiceable
     var topLevelDictionary: TopLevelDictionary?
     var albumResults: [AlbumResults] = []
-    var searchTerm: String?
-//    weak var delegate: AlbumListTableViewDelegate?
+    weak var delegate: AlbumListViewModelDelegate?
     
-    init(albumService: AlbumServiceable = AlbumService()) {
+    init(albumService: AlbumServiceable = AlbumService(), delegate: AlbumListViewModelDelegate) {
         self.albumService = albumService
+        self.delegate = delegate
     }
     
-    func loadAlbums() {
-        guard let searchTerm = searchTerm else {return}
+    func loadAlbums(with searchTerm: String) {
         albumService.fetchAlbum(with: searchTerm) { [weak self] result in
             switch result {
             case .success(let topLevelDic):
@@ -33,5 +36,4 @@ class AlbumListViewModel {
             }
         }
     }
-    
 }//End of class

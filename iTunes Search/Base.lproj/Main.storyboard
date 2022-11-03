@@ -11,7 +11,7 @@
         <!--iTunes Search-->
         <scene sceneID="5VE-aE-FNT">
             <objects>
-                <tableViewController id="Uet-pX-oHG" sceneMemberID="viewController">
+                <tableViewController id="Uet-pX-oHG" customClass="AlbumListTableViewController" customModule="iTunes_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ghh-X8-3lF">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" rowHeight="120" id="EEW-we-pr9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" rowHeight="120" id="EEW-we-pr9" customClass="AlbumTableViewCell" customModule="iTunes_Search" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="94" width="390" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EEW-we-pr9" id="arT-2T-WRe">
@@ -64,7 +64,7 @@
                                             <rect key="frame" x="309" y="88" width="61" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -78,6 +78,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="albumArtWorkImageView" destination="Jvk-6H-S1t" id="Cx0-zA-lKj"/>
+                                    <outlet property="albumPriceLabel" destination="KYf-OB-6RT" id="Yoh-1x-QyV"/>
+                                    <outlet property="albumTitleLabel" destination="yFv-Gz-FXh" id="rm4-Tl-e8o"/>
+                                    <outlet property="trackCountLabel" destination="wPA-RI-GJU" id="qeh-2O-wWi"/>
                                     <segue destination="pgn-2v-IIy" kind="show" id="ofl-Wl-WRB"/>
                                 </connections>
                             </tableViewCell>
@@ -88,6 +92,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="iTunes Search" id="TeX-Z0-7sS"/>
+                    <connections>
+                        <outlet property="artistSearchBar" destination="pNd-y5-HcR" id="zoy-9z-N2g"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6t-Ep-s5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

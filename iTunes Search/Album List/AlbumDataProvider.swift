@@ -13,13 +13,22 @@ protocol AlbumServiceable {
 
 struct AlbumService: AlbumServiceable {
     private let service = APIService()
-    private var baseURL = "https://itunes.apple.com/search?entity=album&attribute=allArtistTerm&limit=25&term="
+    private var baseURL = "https://itunes.apple.com/search"
 
     func fetchAlbum(with artistName: String, completion: @escaping (Result<TopLevelDictionary, NetworkError>) -> Void) {
-        let artistURL = baseURL + artistName.lowercased()
-        guard let baseAlbumURL = URL(string: artistURL) else {completion(.failure(.badURL)); return}
+        let artistName = artistName.lowercased()
         
-        let request = URLRequest(url: baseAlbumURL)
+        guard let baseAlbumURL = URL(string: baseURL) else {completion(.failure(.badURL)); return}
+        let searchQuery = URLQueryItem(name: "term", value: artistName)
+        let entityQuery = URLQueryItem(name: "entity", value: "album")
+        let attributeQuery = URLQueryItem(name: "attribute", value: "allArtistTerm")
+        let limitQuery = URLQueryItem(name: "limit", value: "25 25")
+        var components = NSURLComponents(url: baseAlbumURL, resolvingAgainstBaseURL: true)
+        components?.queryItems = [entityQuery, attributeQuery, limitQuery, searchQuery]
+        guard let finalURL = components?.url else {return}
+        
+        print(finalURL)
+        let request = URLRequest(url: finalURL)
         
         service.perform(request) { result in
             switch result {
