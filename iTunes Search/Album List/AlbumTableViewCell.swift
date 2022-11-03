@@ -24,9 +24,10 @@ class AlbumTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureAlbum(with album: AlbumResults) {
-        albumTitleLabel.text = "\(album.collectionName)"
-        albumPriceLabel.text = "\(album.collectionPrice)"
-        trackCountLabel.text = "\(album.trackCount) Songs"
+    func configureAlbum(with album: AlbumResults?) {
+        guard let album = album else {return}
+        albumTitleLabel.text = "\(album.collectionName ?? "empty")"
+        albumPriceLabel.text = "$\(album.collectionPrice ?? 0.0)"
+        trackCountLabel.text = "\(album.trackCount ?? 0) Songs"
     }
 }

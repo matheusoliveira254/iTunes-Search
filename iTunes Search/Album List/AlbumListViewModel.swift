@@ -27,12 +27,11 @@ class AlbumListViewModel {
         albumService.fetchAlbum(with: searchTerm) { [weak self] result in
             switch result {
             case .success(let topLevelDic):
+                self?.albumResults = []
                 self?.topLevelDictionary = topLevelDic
                 self?.albumResults.append(contentsOf: topLevelDic.results)
             case .failure(let error):
                 print("Error fetching the data!", error.localizedDescription)
-//                self?.delegate.encountered(error)
-
             }
         }
     }
