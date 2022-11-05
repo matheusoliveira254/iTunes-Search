@@ -13,7 +13,7 @@ protocol AlbumServiceable {
 
 struct AlbumService: AlbumServiceable {
     private let service = APIService()
-    private var baseURL = "https://itunes.apple.com/search"
+    private let baseURL = "https://itunes.apple.com/search"
 
     func fetchAlbum(with artistName: String, completion: @escaping (Result<TopLevelDictionary, NetworkError>) -> Void) {
         let artistName = artistName.lowercased()

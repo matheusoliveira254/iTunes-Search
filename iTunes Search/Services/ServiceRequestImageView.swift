@@ -25,4 +25,4 @@ class ServiceRequestImageView: UIImageView {
             }
         }
     }
-}
+}//End of class

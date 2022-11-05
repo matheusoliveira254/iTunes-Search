@@ -125,10 +125,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="z7I-0s-1fw">
-                                        <rect key="frame" x="0.0" y="50" width="358" height="42"/>
+                                        <rect key="frame" x="0.0" y="50" width="358" height="39.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z7I-0s-1fw" id="MlZ-TM-DkO">
-                                            <rect key="frame" x="0.0" y="0.0" width="358" height="42"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="39.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="242" translatesAutoresizingMaskIntoConstraints="NO" id="Pod-86-A7a">
@@ -149,8 +149,8 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5H-za-gFP">
-                                                    <rect key="frame" x="20" y="21.333333333333329" width="37" height="20.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <rect key="frame" x="20.000000000000004" y="21.333333333333336" width="33.333333333333343" height="18.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

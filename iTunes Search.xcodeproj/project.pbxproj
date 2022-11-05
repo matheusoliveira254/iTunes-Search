@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A1222441291313C8005CAD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1222440291313C8005CAD8E /* AppDelegate.swift */; };
 		A1222443291313C8005CAD8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1222442291313C8005CAD8E /* SceneDelegate.swift */; };
-		A1222445291313C8005CAD8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1222444291313C8005CAD8E /* ViewController.swift */; };
+		A1222445291313C8005CAD8E /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1222444291313C8005CAD8E /* AlbumDetailViewController.swift */; };
 		A1222448291313C8005CAD8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1222446291313C8005CAD8E /* Main.storyboard */; };
 		A122244A291313CA005CAD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1222449291313CA005CAD8E /* Assets.xcassets */; };
 		A122244D291313CA005CAD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A122244B291313CA005CAD8E /* LaunchScreen.storyboard */; };
@@ -22,13 +22,16 @@
 		A122246629143027005CAD8E /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246529143027005CAD8E /* AlbumTableViewCell.swift */; };
 		A1222468291430A8005CAD8E /* AlbumDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1222467291430A8005CAD8E /* AlbumDataProvider.swift */; };
 		A122246A29148880005CAD8E /* ServiceRequestImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246929148880005CAD8E /* ServiceRequestImageView.swift */; };
+		A122246C2915E6F8005CAD8E /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246B2915E6F8005CAD8E /* AlbumDetailViewModel.swift */; };
+		A122246E2915E807005CAD8E /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246D2915E807005CAD8E /* AlbumDetailTableViewCell.swift */; };
+		A12224712915E8AF005CAD8E /* AlbumDetailDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12224702915E8AF005CAD8E /* AlbumDetailDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A122243D291313C8005CAD8E /* iTunes Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1222440291313C8005CAD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1222442291313C8005CAD8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1222444291313C8005CAD8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A1222444291313C8005CAD8E /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 		A1222447291313C8005CAD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1222449291313CA005CAD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A122244C291313CA005CAD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +45,9 @@
 		A122246529143027005CAD8E /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		A1222467291430A8005CAD8E /* AlbumDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataProvider.swift; sourceTree = "<group>"; };
 		A122246929148880005CAD8E /* ServiceRequestImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestImageView.swift; sourceTree = "<group>"; };
+		A122246B2915E6F8005CAD8E /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
+		A122246D2915E807005CAD8E /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
+		A12224702915E8AF005CAD8E /* AlbumDetailDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +82,9 @@
 			children = (
 				A122245429133600005CAD8E /* Resources */,
 				A122245A291341E9005CAD8E /* Model */,
-				A1222444291313C8005CAD8E /* ViewController.swift */,
-				A1222446291313C8005CAD8E /* Main.storyboard */,
 				A122245F29142BDF005CAD8E /* Services */,
 				A122246429142C91005CAD8E /* Album List */,
+				A122246F2915E81C005CAD8E /* Album Details */,
 			);
 			path = "iTunes Search";
 			sourceTree = "<group>";
@@ -122,8 +127,20 @@
 				A122246029142C68005CAD8E /* AlbumListViewModel.swift */,
 				A122246229142C8A005CAD8E /* AlbumListTableViewController.swift */,
 				A122246529143027005CAD8E /* AlbumTableViewCell.swift */,
+				A1222446291313C8005CAD8E /* Main.storyboard */,
 			);
 			path = "Album List";
+			sourceTree = "<group>";
+		};
+		A122246F2915E81C005CAD8E /* Album Details */ = {
+			isa = PBXGroup;
+			children = (
+				A12224702915E8AF005CAD8E /* AlbumDetailDataProvider.swift */,
+				A122246B2915E6F8005CAD8E /* AlbumDetailViewModel.swift */,
+				A1222444291313C8005CAD8E /* AlbumDetailViewController.swift */,
+				A122246D2915E807005CAD8E /* AlbumDetailTableViewCell.swift */,
+			);
+			path = "Album Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1222445291313C8005CAD8E /* ViewController.swift in Sources */,
+				A1222445291313C8005CAD8E /* AlbumDetailViewController.swift in Sources */,
 				A122245E291429B5005CAD8E /* NetworkError.swift in Sources */,
 				A122245929133A3B005CAD8E /* AlbumDetails.swift in Sources */,
 				A122246329142C8A005CAD8E /* AlbumListTableViewController.swift in Sources */,
@@ -205,9 +222,12 @@
 				A1222441291313C8005CAD8E /* AppDelegate.swift in Sources */,
 				A122246629143027005CAD8E /* AlbumTableViewCell.swift in Sources */,
 				A122246129142C68005CAD8E /* AlbumListViewModel.swift in Sources */,
+				A12224712915E8AF005CAD8E /* AlbumDetailDataProvider.swift in Sources */,
+				A122246C2915E6F8005CAD8E /* AlbumDetailViewModel.swift in Sources */,
 				A122246A29148880005CAD8E /* ServiceRequestImageView.swift in Sources */,
 				A1222443291313C8005CAD8E /* SceneDelegate.swift in Sources */,
 				A122245C29142827005CAD8E /* APIService.swift in Sources */,
+				A122246E2915E807005CAD8E /* AlbumDetailTableViewCell.swift in Sources */,
 				A122245729133655005CAD8E /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
