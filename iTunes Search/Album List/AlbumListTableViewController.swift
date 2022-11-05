@@ -51,6 +51,5 @@ extension AlbumListTableViewController: AlbumListViewModelDelegate {
 extension AlbumListTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         albumListViewModel.loadAlbums(with: searchText)
-        tableView.reloadData()
     }
 }

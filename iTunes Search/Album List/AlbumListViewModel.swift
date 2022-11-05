@@ -30,6 +30,9 @@ class AlbumListViewModel {
                 self?.albumResults = []
                 self?.topLevelDictionary = topLevelDic
                 self?.albumResults.append(contentsOf: topLevelDic.results)
+                DispatchQueue.main.async {
+                    self?.delegate?.updateViews()
+                }
             case .failure(let error):
                 print("Error fetching the data!", error.localizedDescription)
             }

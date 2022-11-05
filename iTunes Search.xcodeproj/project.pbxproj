@@ -21,6 +21,7 @@
 		A122246329142C8A005CAD8E /* AlbumListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246229142C8A005CAD8E /* AlbumListTableViewController.swift */; };
 		A122246629143027005CAD8E /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246529143027005CAD8E /* AlbumTableViewCell.swift */; };
 		A1222468291430A8005CAD8E /* AlbumDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1222467291430A8005CAD8E /* AlbumDataProvider.swift */; };
+		A122246A29148880005CAD8E /* ServiceRequestImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246929148880005CAD8E /* ServiceRequestImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A122246229142C8A005CAD8E /* AlbumListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewController.swift; sourceTree = "<group>"; };
 		A122246529143027005CAD8E /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		A1222467291430A8005CAD8E /* AlbumDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataProvider.swift; sourceTree = "<group>"; };
+		A122246929148880005CAD8E /* ServiceRequestImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				A122245B29142827005CAD8E /* APIService.swift */,
 				A122245D291429B5005CAD8E /* NetworkError.swift */,
+				A122246929148880005CAD8E /* ServiceRequestImageView.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				A1222441291313C8005CAD8E /* AppDelegate.swift in Sources */,
 				A122246629143027005CAD8E /* AlbumTableViewCell.swift in Sources */,
 				A122246129142C68005CAD8E /* AlbumListViewModel.swift in Sources */,
+				A122246A29148880005CAD8E /* ServiceRequestImageView.swift in Sources */,
 				A1222443291313C8005CAD8E /* SceneDelegate.swift in Sources */,
 				A122245C29142827005CAD8E /* APIService.swift in Sources */,
 				A122245729133655005CAD8E /* Album.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 class AlbumTableViewCell: UITableViewCell {
-    @IBOutlet weak var albumArtWorkImageView: UIImageView!
+    @IBOutlet weak var albumArtWorkImageView: ServiceRequestImageView!
     @IBOutlet weak var albumTitleLabel: UILabel!
     @IBOutlet weak var albumPriceLabel: UILabel!
     @IBOutlet weak var trackCountLabel: UILabel!
@@ -29,5 +29,11 @@ class AlbumTableViewCell: UITableViewCell {
         albumTitleLabel.text = "\(album.collectionName ?? "empty")"
         albumPriceLabel.text = "$\(album.collectionPrice ?? 0.0)"
         trackCountLabel.text = "\(album.trackCount ?? 0) Songs"
+        fetchImage(for: album)
     }
-}
+    
+    func fetchImage(for artist: AlbumResults) {
+        guard let imageURL = URL(string: artist.artworkUrl100 ?? "empty image url") else {return}
+                albumArtWorkImageView.fetch(using: imageURL)
+    }
+}// End of class
