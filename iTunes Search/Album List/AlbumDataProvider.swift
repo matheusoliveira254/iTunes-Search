@@ -22,7 +22,7 @@ struct AlbumService: AlbumServiceable {
         let searchQuery = URLQueryItem(name: "term", value: artistName)
         let entityQuery = URLQueryItem(name: "entity", value: "album")
         let attributeQuery = URLQueryItem(name: "attribute", value: "allArtistTerm")
-        let limitQuery = URLQueryItem(name: "limit", value: "25 25")
+        let limitQuery = URLQueryItem(name: "limit", value: "25")
         var components = NSURLComponents(url: baseAlbumURL, resolvingAgainstBaseURL: true)
         components?.queryItems = [entityQuery, attributeQuery, limitQuery, searchQuery]
         guard let finalURL = components?.url else {return}
