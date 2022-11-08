@@ -9,10 +9,10 @@ import Foundation
 
 struct DetailsTopLevelDictionary: Decodable {
     let resultCount: Int
-    let results: [Song]
+    let results: [SongDetails]
 }
 
-struct Song: Decodable {
+struct SongDetails: Decodable {
     let trackName: String?
     let trackTimeMillis: Int?
     let trackPrice: Double?

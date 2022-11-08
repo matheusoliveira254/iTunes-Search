@@ -38,7 +38,13 @@ class AlbumListTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        guard segue.identifier == "toDetailVC",
+//              let indexPath = tableView.indexPathForSelectedRow,
+              let destinationVC = segue.destination as? AlbumDetailViewController,
+              let cell = sender as? AlbumTableViewCell,
+              let albumTitle = cell.albumTitleLabel.text,
+              let albumArt = cell.albumArtWorkImageView.image else {return}
+        destinationVC.configureDetail(with: albumArt, title: albumTitle)
     }
 }//End of class
 

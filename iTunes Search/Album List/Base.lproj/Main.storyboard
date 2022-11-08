@@ -81,7 +81,7 @@
                                     <outlet property="albumPriceLabel" destination="KYf-OB-6RT" id="Yoh-1x-QyV"/>
                                     <outlet property="albumTitleLabel" destination="yFv-Gz-FXh" id="rm4-Tl-e8o"/>
                                     <outlet property="trackCountLabel" destination="wPA-RI-GJU" id="qeh-2O-wWi"/>
-                                    <segue destination="pgn-2v-IIy" kind="show" id="ofl-Wl-WRB"/>
+                                    <segue destination="pgn-2v-IIy" kind="show" identifier="toDetailVC" id="ofl-Wl-WRB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -99,22 +99,22 @@
             </objects>
             <point key="canvasLocation" x="1023.0769230769231" y="-88.151658767772503"/>
         </scene>
-        <!--View Controller-->
+        <!--Album Detail View Controller-->
         <scene sceneID="ajr-sk-xPN">
             <objects>
-                <viewController id="pgn-2v-IIy" sceneMemberID="viewController">
+                <viewController id="pgn-2v-IIy" customClass="AlbumDetailViewController" customModule="iTunes_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tWz-uf-4do">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FZL-lN-EbB" customClass="ServiceRequestImageView" customModule="iTunes_Search" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FZL-lN-EbB">
                                 <rect key="frame" x="145" y="112.66666666666666" width="100" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="M2F-YM-mPg"/>
                                     <constraint firstAttribute="height" constant="100" id="lH0-3j-21V"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axc-UV-JN2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axc-UV-JN2">
                                 <rect key="frame" x="80" y="227" width="230" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -183,6 +183,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gQH-Sf-GLH"/>
+                    <connections>
+                        <outlet property="AlbumDetailsArtImageView" destination="FZL-lN-EbB" id="C9d-xQ-kUk"/>
+                        <outlet property="AlbumDetailsTitleLabel" destination="Axc-UV-JN2" id="dkW-Aa-HHo"/>
+                        <outlet property="songsDetailTableView" destination="CGC-5f-Qf9" id="yLv-bq-1KG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibx-yH-loD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
