@@ -8,16 +8,18 @@
 import UIKit
 
 class AlbumDetailTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    //MARK: - IBOutlet
+    @IBOutlet weak var songTitleLabel: UILabel!
+    @IBOutlet weak var songPriceLabel: UILabel!
+    @IBOutlet weak var songTimeLabel: UILabel!
+    
+    func configureSongCell(with song: SongDetails?) {
+        guard let song = song else {return}
+        DispatchQueue.main.async {
+            self.songTitleLabel.text = song.trackName
+            self.songPriceLabel.text = "$\(song.trackPrice)"
+//            songTimeLabel.text =
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-}
+}//End of class

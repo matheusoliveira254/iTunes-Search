@@ -13,7 +13,7 @@ protocol AlbumDetailViewModelDelegate: AnyObject {
 
 class AlbumDetailViewModel {
     private let albumDetailService: AlbumDetailSearviceable
-    private var songDetails: [SongDetails] = []
+    var songDetails: [SongDetails] = []
     weak var delegate: AlbumDetailViewModelDelegate?
     
     init(albumDetailService: AlbumDetailSearviceable = AlbumDetailService(), delegate: AlbumDetailViewModelDelegate) {
