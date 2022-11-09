@@ -45,6 +45,7 @@ class AlbumListTableViewController: UITableViewController {
               let albumTitle = cell.albumTitleLabel.text,
               let albumArt = cell.albumArtWorkImageView.image else {return}
         destinationVC.configureDetail(with: albumArt, title: albumTitle)
+        destinationVC.albumDetailViewModel = AlbumDetailViewModel(delegate: destinationVC)
         destinationVC.albumDetailViewModel.loadAlbumDetails(with: albumListViewModel.albumResults[indexPath.row])
     }
 }//End of class
