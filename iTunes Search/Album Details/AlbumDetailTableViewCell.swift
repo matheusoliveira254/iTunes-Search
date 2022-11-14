@@ -15,10 +15,14 @@ class AlbumDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var songTimeLabel: UILabel!
     
     func configureSongCell(with song: SongDetails?) {
-        guard let song = song else {return}
+        guard let song = song,
+              let songTitle = song.trackName,
+              let songPrice = song.trackPrice,
+              let songTime = song.trackTimeMillis else {return}
+                
         DispatchQueue.main.async {
-            self.songTitleLabel.text = song.trackName
-            self.songPriceLabel.text = "$\(song.trackPrice)"
+            self.songTitleLabel.text = songTitle
+            self.songPriceLabel.text = "$\(songPrice ?? 0.0)"
 //            songTimeLabel.text =
         }
     }
