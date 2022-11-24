@@ -23,7 +23,7 @@ class AlbumDetailTableViewCell: UITableViewCell {
         DispatchQueue.main.async {
             self.songTitleLabel.text = songTitle
             self.songPriceLabel.text = "$\(songPrice ?? 0.0)"
-//            songTimeLabel.text =
+            self.songTimeLabel.text = "\(songTime / 1000 ?? 0)"
         }
     }
 }//End of class
