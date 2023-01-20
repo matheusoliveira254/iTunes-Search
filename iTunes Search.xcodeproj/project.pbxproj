@@ -25,6 +25,7 @@
 		A122246C2915E6F8005CAD8E /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246B2915E6F8005CAD8E /* AlbumDetailViewModel.swift */; };
 		A122246E2915E807005CAD8E /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122246D2915E807005CAD8E /* AlbumDetailTableViewCell.swift */; };
 		A12224712915E8AF005CAD8E /* AlbumDetailDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12224702915E8AF005CAD8E /* AlbumDetailDataProvider.swift */; };
+		A1CD9552297B106000A7749D /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9551297B106000A7749D /* TimeFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		A122246B2915E6F8005CAD8E /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 		A122246D2915E807005CAD8E /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
 		A12224702915E8AF005CAD8E /* AlbumDetailDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailDataProvider.swift; sourceTree = "<group>"; };
+		A1CD9551297B106000A7749D /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				A122245B29142827005CAD8E /* APIService.swift */,
 				A122245D291429B5005CAD8E /* NetworkError.swift */,
 				A122246929148880005CAD8E /* ServiceRequestImageView.swift */,
+				A1CD9551297B106000A7749D /* TimeFormatter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1222445291313C8005CAD8E /* AlbumDetailViewController.swift in Sources */,
+				A1CD9552297B106000A7749D /* TimeFormatter.swift in Sources */,
 				A122245E291429B5005CAD8E /* NetworkError.swift in Sources */,
 				A122245929133A3B005CAD8E /* AlbumDetails.swift in Sources */,
 				A122246329142C8A005CAD8E /* AlbumListTableViewController.swift in Sources */,
