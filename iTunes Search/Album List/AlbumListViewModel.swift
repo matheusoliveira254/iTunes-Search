@@ -14,7 +14,6 @@ protocol AlbumListViewModelDelegate: AnyObject {
 class AlbumListViewModel {
     
     private let albumService: AlbumServiceable
-//    var topLevelDictionary: TopLevelDictionary?
     var albumResults: [AlbumResults] = []
     weak var delegate: AlbumListViewModelDelegate?
     
@@ -28,7 +27,6 @@ class AlbumListViewModel {
             switch result {
             case .success(let topLevelDictionary):
                 self?.albumResults = []
-//                self?.topLevelDictionary = topLevelDictionary
                 self?.albumResults.append(contentsOf: topLevelDictionary.results)
                 DispatchQueue.main.async {
                     self?.delegate?.updateViews()

@@ -26,6 +26,7 @@ class AlbumDetailViewModel {
             switch result {
             case .success(let songDetails):
                 self?.songDetails.append(contentsOf: songDetails.results)
+                self?.songDetails.remove(at: 0)
                 DispatchQueue.main.async {
                     self?.delegate?.updateDetailViews()
                 }
